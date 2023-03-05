@@ -1,0 +1,351 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-04T02:04:02.719Z",
+    "end": "2022-12-04T02:04:18.132Z",
+    "duration": 15413,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9213f5da-2bd2-4d04-97a4-e46ee8f64ea6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b574607c-d813-47c7-acc8-9887841a27b0",
+          "title": "FE - Vista de libros",
+          "fullFile": "C:\\Users\\Francis\\Desktop\\me\\aseguradoras\\frontend\\src\\test\\test.js",
+          "file": "\\src\\test\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tiene el titulo de pagina requerido",
+              "fullTitle": "FE - Vista de libros Tiene el titulo de pagina requerido",
+              "timedOut": false,
+              "duration": 1866,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nconst title = await driver.getTitle()\nexpect(title).to.eq('Aseguradoras')\ndriver.quit()",
+              "err": {},
+              "uuid": "146932b3-ef25-4310-acfa-96a0c33c35ca",
+              "parentUUID": "b574607c-d813-47c7-acc8-9887841a27b0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tiene el texto que muestra la ultima vez que se actualizó la tabla",
+              "fullTitle": "FE - Vista de libros Tiene el texto que muestra la ultima vez que se actualizó la tabla",
+              "timedOut": false,
+              "duration": 1533,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nconst loggerTitle = await driver.findElement(By.id('logger')).getText()\nexpect(loggerTitle).to.eq('Updated 2 minutes ago')\ndriver.quit()",
+              "err": {},
+              "uuid": "4c770e9d-914c-4848-a3ea-df22e4c1be3e",
+              "parentUUID": "b574607c-d813-47c7-acc8-9887841a27b0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "146932b3-ef25-4310-acfa-96a0c33c35ca",
+            "4c770e9d-914c-4848-a3ea-df22e4c1be3e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3399,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "81eb7e92-007e-4e5f-9702-c23cc61e67d1",
+          "title": "FE - Visualizar todos los libros de la base de datos",
+          "fullFile": "C:\\Users\\Francis\\Desktop\\me\\aseguradoras\\frontend\\src\\test\\test.js",
+          "file": "\\src\\test\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Usa una tabla para mostrar los datos",
+              "fullTitle": "FE - Visualizar todos los libros de la base de datos Usa una tabla para mostrar los datos",
+              "timedOut": false,
+              "duration": 1489,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nconst table = await driver.findElement(By.className('chakra-table')).isDisplayed()\nexpect(table).to.eq(true)\ndriver.quit()",
+              "err": {},
+              "uuid": "cbc32314-c09f-4c56-a926-58cc00ab26ad",
+              "parentUUID": "81eb7e92-007e-4e5f-9702-c23cc61e67d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agrega los registros en la tabla",
+              "fullTitle": "FE - Visualizar todos los libros de la base de datos Agrega los registros en la tabla",
+              "timedOut": false,
+              "duration": 1425,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nsetTimeout(async() => {\n    const botonEliminar = await driver.findElement(By.css('.bookTitle')).isDisplayed()\n    expect(botonEliminar).to.eq(true)\n    driver.quit()\n}, 900)",
+              "err": {},
+              "uuid": "fac52f0b-bd71-4256-9ca6-406bf7a3b643",
+              "parentUUID": "81eb7e92-007e-4e5f-9702-c23cc61e67d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cbc32314-c09f-4c56-a926-58cc00ab26ad",
+            "fac52f0b-bd71-4256-9ca6-406bf7a3b643"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2914,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "c16928ff-5a89-4227-ae8d-30e905d6c0a3",
+          "title": "FE - Eliminar libro de la base de datos",
+          "fullFile": "C:\\Users\\Francis\\Desktop\\me\\aseguradoras\\frontend\\src\\test\\test.js",
+          "file": "\\src\\test\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "El boton eliminar existe",
+              "fullTitle": "FE - Eliminar libro de la base de datos El boton eliminar existe",
+              "timedOut": false,
+              "duration": 1372,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nsetTimeout(async() => {\n    const tituloLibro = await driver.findElement(By.css('.deleteButton')).isDisplayed()\n    expect(tituloLibro).to.eq(true)\n    driver.quit()\n}, 900)",
+              "err": {},
+              "uuid": "e61511ab-bf6a-483a-8ad3-e1fa131dac9c",
+              "parentUUID": "c16928ff-5a89-4227-ae8d-30e905d6c0a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "El boton tiene color rojo",
+              "fullTitle": "FE - Eliminar libro de la base de datos El boton tiene color rojo",
+              "timedOut": false,
+              "duration": 1447,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nsetTimeout(async() => {\n    const botonEliminar = await driver.findElement(By.css('.deleteButton')).isEnabled()\n    expect(botonEliminar).to.eq(true)\n    driver.quit()\n}, 900)",
+              "err": {},
+              "uuid": "40667f0c-33f8-4101-9467-16d22aa24750",
+              "parentUUID": "c16928ff-5a89-4227-ae8d-30e905d6c0a3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Se muestra el mensaje de eliminado",
+              "fullTitle": "FE - Eliminar libro de la base de datos Se muestra el mensaje de eliminado",
+              "timedOut": false,
+              "duration": 1288,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nsetTimeout(async() => {\n    await driver.findElement(By.id('botonEliminar-1')).click()\n    const mensaje = await driver.findElement(By.className('chakra-toast__inner')).isDisplayed()\n    expect(mensaje).to.eq(true)\n    driver.quit()\n}, 900)",
+              "err": {},
+              "uuid": "716b14e3-828e-44f2-9ba2-c5940a776530",
+              "parentUUID": "c16928ff-5a89-4227-ae8d-30e905d6c0a3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e61511ab-bf6a-483a-8ad3-e1fa131dac9c",
+            "40667f0c-33f8-4101-9467-16d22aa24750",
+            "716b14e3-828e-44f2-9ba2-c5940a776530"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4107,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "dd48cb02-5ec9-4d79-999c-a70658ad37d2",
+          "title": "FE - Editar libros de la base de datos",
+          "fullFile": "C:\\Users\\Francis\\Desktop\\me\\aseguradoras\\frontend\\src\\test\\test.js",
+          "file": "\\src\\test\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "El formulario esta en un modal",
+              "fullTitle": "FE - Editar libros de la base de datos El formulario esta en un modal",
+              "timedOut": false,
+              "duration": 1417,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nsetTimeout(async() => {\n    await driver.findElement(By.id('botonEditar-1')).click()\n    const modal = await driver.findElement(By.className('chakra-modal__header')).isDisplayed()\n    expect(modal).to.eq(true)\n    driver.quit()\n}, 900)",
+              "err": {},
+              "uuid": "672b6f75-329f-4d09-81bd-7ad7651daec6",
+              "parentUUID": "dd48cb02-5ec9-4d79-999c-a70658ad37d2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Se muestra el mensaje de no inputs en blanco",
+              "fullTitle": "FE - Editar libros de la base de datos Se muestra el mensaje de no inputs en blanco",
+              "timedOut": false,
+              "duration": 1567,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nsetTimeout(async() => {\n    await driver.findElement(By.id('botonEditar-1')).click()\n    await driver.findElement(By.id('enviarForm')).click()\n    const mensaje = await driver.findElement(By.className('chakra-alert')).isDisplayed()\n    expect(mensaje).to.eq(true)\n    driver.quit()\n}, 900)",
+              "err": {},
+              "uuid": "068b6562-60e7-4401-87ba-1413c1bc9754",
+              "parentUUID": "dd48cb02-5ec9-4d79-999c-a70658ad37d2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "672b6f75-329f-4d09-81bd-7ad7651daec6",
+            "068b6562-60e7-4401-87ba-1413c1bc9754"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2984,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        },
+        {
+          "uuid": "ca6c1a5d-0d17-468f-9bb1-b50c599c3b31",
+          "title": "FE - Agregar libros a la base de datos",
+          "fullFile": "C:\\Users\\Francis\\Desktop\\me\\aseguradoras\\frontend\\src\\test\\test.js",
+          "file": "\\src\\test\\test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "El formulario esta en un modal",
+              "fullTitle": "FE - Agregar libros a la base de datos El formulario esta en un modal",
+              "timedOut": false,
+              "duration": 1975,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.get(\"http://localhost:3000/\");\nawait driver.findElement(By.id('newButton')).click()\nconst modal = await driver.findElement(By.className('chakra-modal__header')).isDisplayed()\nexpect(modal).to.eq(true)\ndriver.quit()",
+              "err": {},
+              "uuid": "35141b72-768d-484b-81a2-ec6e0099514b",
+              "parentUUID": "ca6c1a5d-0d17-468f-9bb1-b50c599c3b31",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "35141b72-768d-484b-81a2-ec6e0099514b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1975,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 5000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 5000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
