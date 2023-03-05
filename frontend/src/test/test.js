@@ -3,7 +3,7 @@ const { expect } = require('chai');
 require("chromedriver")
 
 
-describe("FE - Vista de libros", function() {
+describe("FE - Vista de aseguradoras", function() {
 
     it("Tiene el titulo de pagina requerido", async function() {
         let driver = await new Builder().forBrowser("chrome").build();
@@ -22,7 +22,7 @@ describe("FE - Vista de libros", function() {
     })
 })
 
-describe("FE - Visualizar todos los libros de la base de datos", function() {
+describe("FE - Visualizar todos los aseguradoras de la base de datos", function() {
 
     it("Usa una tabla para mostrar los datos", async function() {
         let driver = await new Builder().forBrowser("chrome").build();
@@ -77,7 +77,7 @@ describe("FE - Eliminar libro de la base de datos", function() {
     })
 })
 
-describe("FE - Editar libros de la base de datos", function() {
+describe("FE - Editar aseguradoras de la base de datos", function() {
     it("El formulario esta en un modal", async function() {
         let driver = await new Builder().forBrowser("chrome").build();
         await driver.get("http://localhost:3000/");
@@ -102,7 +102,7 @@ describe("FE - Editar libros de la base de datos", function() {
     })
 })
 
-describe("FE - Agregar libros a la base de datos", function() {
+describe("FE - Agregar aseguradoras a la base de datos", function() {
     it("El formulario esta en un modal", async function() {
         let driver = await new Builder().forBrowser("chrome").build();
         await driver.get("http://localhost:3000/");
